@@ -9,6 +9,7 @@ import { confirmParticipant } from "./routes/confirm-participant";
 import { confirmTrip } from "./routes/confirm-trip";
 import { createTrip } from "./routes/create-trip";
 import { getTripDetails } from "./routes/get-trip-details";
+import { updateTrip } from "./routes/update-trip";
 
 const app = fastify();
 
@@ -22,6 +23,7 @@ app.setSerializerCompiler(serializerCompiler);
 app.register(createTrip);
 app.register(getTripDetails);
 app.register(confirmTrip);
+app.register(updateTrip);
 app.register(confirmParticipant);
 
 app.listen({ port: env.PORT }).then(() => {

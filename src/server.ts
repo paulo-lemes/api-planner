@@ -7,6 +7,7 @@ import {
 import { env } from "./env";
 import { confirmParticipant } from "./routes/confirm-participant";
 import { confirmTrip } from "./routes/confirm-trip";
+import { createInvites } from "./routes/create-invites";
 import { createTrip } from "./routes/create-trip";
 import { deleteParticipant } from "./routes/delete-participant";
 import { getParticipant } from "./routes/get-participant";
@@ -31,6 +32,7 @@ app.register(confirmParticipant);
 app.register(getParticipants);
 app.register(getParticipant);
 app.register(deleteParticipant);
+app.register(createInvites);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("Server running!");

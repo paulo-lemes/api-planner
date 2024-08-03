@@ -10,12 +10,13 @@ import { confirmTrip } from "./routes/confirm-trip";
 import { createActivity } from "./routes/create-activity";
 import { createInvites } from "./routes/create-invites";
 import { createTrip } from "./routes/create-trip";
+import { deleteActivity } from "./routes/delete-activity";
 import { deleteParticipant } from "./routes/delete-participant";
+import { getActivities } from "./routes/get-activities";
 import { getParticipant } from "./routes/get-participant";
 import { getParticipants } from "./routes/get-participants";
 import { getTripDetails } from "./routes/get-trip-details";
 import { updateTrip } from "./routes/update-trip";
-import { getActivities } from "./routes/get-activities";
 
 const app = fastify();
 
@@ -37,6 +38,7 @@ app.register(deleteParticipant);
 app.register(createInvites);
 app.register(createActivity);
 app.register(getActivities);
+app.register(deleteActivity);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("Server running!");

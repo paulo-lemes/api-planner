@@ -15,6 +15,7 @@ import { getParticipant } from "./routes/get-participant";
 import { getParticipants } from "./routes/get-participants";
 import { getTripDetails } from "./routes/get-trip-details";
 import { updateTrip } from "./routes/update-trip";
+import { getActivities } from "./routes/get-activities";
 
 const app = fastify();
 
@@ -35,6 +36,7 @@ app.register(getParticipant);
 app.register(deleteParticipant);
 app.register(createInvites);
 app.register(createActivity);
+app.register(getActivities);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("Server running!");

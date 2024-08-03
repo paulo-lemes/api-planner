@@ -21,6 +21,10 @@ export async function deleteActivity(app: FastifyInstance) {
         where: { id: activityId },
       });
 
+      if (!activity) {
+        throw new ClientError("Activity not found");
+      }
+
       const deletedActivity = await prisma.activity.delete({
         where: {
           id: activityId,

@@ -9,6 +9,7 @@ import { confirmParticipant } from "./routes/confirm-participant";
 import { confirmTrip } from "./routes/confirm-trip";
 import { createActivity } from "./routes/create-activity";
 import { createInvites } from "./routes/create-invites";
+import { createLink } from "./routes/create-link";
 import { createTrip } from "./routes/create-trip";
 import { deleteActivity } from "./routes/delete-activity";
 import { deleteParticipant } from "./routes/delete-participant";
@@ -39,6 +40,7 @@ app.register(createInvites);
 app.register(createActivity);
 app.register(getActivities);
 app.register(deleteActivity);
+app.register(createLink);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("Server running!");

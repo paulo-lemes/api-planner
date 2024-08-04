@@ -14,6 +14,7 @@ import { createTrip } from "./routes/create-trip";
 import { deleteActivity } from "./routes/delete-activity";
 import { deleteParticipant } from "./routes/delete-participant";
 import { getActivities } from "./routes/get-activities";
+import { getLinks } from "./routes/get-links";
 import { getParticipant } from "./routes/get-participant";
 import { getParticipants } from "./routes/get-participants";
 import { getTripDetails } from "./routes/get-trip-details";
@@ -41,6 +42,7 @@ app.register(createActivity);
 app.register(getActivities);
 app.register(deleteActivity);
 app.register(createLink);
+app.register(getLinks);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("Server running!");

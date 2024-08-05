@@ -5,6 +5,7 @@ import {
   validatorCompiler,
 } from "fastify-type-provider-zod";
 import { env } from "./env";
+import { changeNameParticipant } from "./routes/change-name-participant";
 import { confirmParticipant } from "./routes/confirm-participant";
 import { confirmTrip } from "./routes/confirm-trip";
 import { createActivity } from "./routes/create-activity";
@@ -35,6 +36,7 @@ app.register(getTripDetails);
 app.register(confirmTrip);
 app.register(updateTrip);
 app.register(confirmParticipant);
+app.register(changeNameParticipant);
 app.register(getParticipants);
 app.register(getParticipant);
 app.register(deleteParticipant);

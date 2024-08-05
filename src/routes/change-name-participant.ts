@@ -27,6 +27,10 @@ export async function changeNameParticipant(app: FastifyInstance) {
         },
       });
 
+      if (!participant) {
+        throw new ClientError("Participant not found.");
+      }
+
       await prisma.participant.update({
         where: { id: participantId },
         data: {

@@ -12,6 +12,7 @@ import { createInvites } from "./routes/create-invites";
 import { createLink } from "./routes/create-link";
 import { createTrip } from "./routes/create-trip";
 import { deleteActivity } from "./routes/delete-activity";
+import { deleteLink } from "./routes/delete-link";
 import { deleteParticipant } from "./routes/delete-participant";
 import { getActivities } from "./routes/get-activities";
 import { getLinks } from "./routes/get-links";
@@ -43,6 +44,7 @@ app.register(getActivities);
 app.register(deleteActivity);
 app.register(createLink);
 app.register(getLinks);
+app.register(deleteLink);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("Server running!");

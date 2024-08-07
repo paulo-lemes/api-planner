@@ -48,6 +48,6 @@ app.register(createLink);
 app.register(getLinks);
 app.register(deleteLink);
 
-app.listen({ port: env.PORT }).then(() => {
+app.listen({ port: env.PORT, host: "0.0.0.0" }).then(() => {
   console.log("Server running!");
 });
